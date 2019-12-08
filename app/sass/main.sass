@@ -1,0 +1,224 @@
+@import "libs"
+@import "vars"
+
+// Пользовательские стили
+body
+	font-family: 'Lato', sans-serif
+a:hover
+	text-decoration: none
+h2
+	font-size: 28px	
+ul
+	list-style: none
+	padding: 0
+	margin: 0
+.header
+	color: #444
+	background: #fff
+	z-index: 2
+	@media (max-width: 992px)
+		position: sticky
+		top: 0
+		left: 0
+	&__menu
+		align-items: center
+		padding: 25px 0 21px
+	&__close
+		width: 25px
+		position: absolute
+		right: 15px
+		top: 20px
+		top: 0
+		z-index: 3
+		@media (min-width: 992px)
+			display: none
+	&__logo
+		align-items: center	
+	&__nav
+		@media (max-width: 992px)
+			display: none
+		& .nav__items
+			list-style: none
+			@media (max-width: 992px)
+				position: absolute
+				flex-direction: column
+				padding: 50px 50px 20px
+				background: #fff
+				top: -30px
+				right: -20px
+				z-index: 2
+			& .nav__item
+				font-size: 14px
+				line-height: 1.2
+				text-transform: uppercase
+				@media (max-width: 992px)
+					padding: 20px 0
+					text-align: center
+				& a
+					color: #444
+					padding: 11px
+					text-decoration: none
+					&:hover
+						background: #1bbc9b
+						color: #fff
+		&--mobile
+			width: 23px
+			@media (min-width: 992px)
+				display: none
+			& img 
+				width: 100%				
+.brand
+	background: url('/img/jumbotron.png') no-repeat
+	background-size: cover
+	color: #fff
+	padding: 80px 0
+	&__title
+		font-size: 55px
+	&__text
+		font-size: 18px
+	&__btn
+		@include btn
+		&:hover
+			color: #fff
+			background: #16a086
+	&__arrow
+		font-size: 50px
+		color: #444
+		background: #fff
+		border-radius: 50%
+		width: 43px
+		height: 43px
+		align-items: center
+		padding: 10px	
+		text-decoration: none
+		&:hover
+			color: #444
+.portfolio
+	padding: 50px 0 60px
+	&__text
+		margin-top: 15px
+	&__menu
+		padding: 35px 0
+		& .active
+			background: #16a086
+	& li
+		@include btn
+		margin: 0 auto
+		@media (max-width: 480px)
+			padding: 10px 3px
+			font-size: 10px
+		&:hover
+			background: #16a086
+	&__wrapper
+		display: flex
+		flex-wrap: wrap
+	&__block
+		margin-bottom: 30px
+		justify-content: center
+		display: flex
+.about
+	background: #16a086
+	color: #fff
+	padding: 50px 0 60px
+	&__subtitle
+		font-size: 14px
+		margin-bottom: 45px
+	&__text
+		color: #444
+		padding: 10px
+	&__item
+		background: #fff	
+		height: 415px
+		width: 220px
+		display: flex
+		margin: 0 auto 20px
+		flex-direction: column
+	&__img 
+		width: 100%
+		position: relative
+		&:hover .about__icons
+			display: flex
+	&__icons
+		display: none
+		width: 80%
+		position: absolute
+		top: 50%
+		left: 50%
+		z-index: 2	
+		transform: translate(-50%, -50%)
+		background: #16a086
+		opacity: .8
+		font-size: 29px
+		justify-content: space-between
+		padding: 5px 10px
+		& a 
+			color: #fff
+			opacity: 1
+	&__name
+		text-align: center
+		font-size: 18px
+	&__pos
+		text-align: center	
+		font-size: 14px
+		font-style: italic
+		line-height: 1.429
+	&__descr
+		font-size: 14px
+		padding-top: 17px
+		line-height: 1.429
+.contact
+	background-color: #ecf0f1
+	padding: 50px 0 60px
+	&__subtitle
+		font-size: 14px
+		margin-bottom: 40px
+	&__form
+		font-size: 14px
+		& input
+			padding: 15px
+			width: 48%
+			border: 3px solid #bec3c7
+			font-style: italic	
+		& textarea
+			width: 100%
+			margin-top: 20px
+			resize: none
+			padding: 15px
+			border: 3px solid #bec3c7
+			font-style: italic	
+			height: 150px
+		& .form__btn
+			@include btn
+			margin: 20px 0 0 auto
+	&__info
+		font-size: 14px
+		margin-bottom: 10px		
+#map 
+	width: 100%
+	height: 264px
+	position: relative
+#floating-panel
+	position: absolute
+	top: 20px
+	z-index: 1
+	font-size: 13px
+	background-color: #fff
+	padding: 5px
+	border: 1px solid #999
+	font-family: Roboto,sans-serif
+	line-height: 30px
+	padding-left: 10px
+	margin-bottom: 10px
+.footer
+	padding: 35px 0
+	background-color: #2d3e50
+	color: #fff
+	font-size: 14px
+	&__up a
+		@include btn
+		padding: 12px
+		font-size: 20px
+
+
+		
+
