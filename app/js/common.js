@@ -28,7 +28,7 @@ $(function() {
 			blocks.forEach(function(item) {
 				item.parentNode.style.display = 'block'
 				if(item.classList.contains(catClass)) {
-					item.style.display = 'block'
+					item.style.display = 'flex'
 				} else {
 					item.parentNode.style.display = 'none'
 				}
